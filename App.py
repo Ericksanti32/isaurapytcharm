@@ -9,7 +9,7 @@ db.init_app(app)
 db.create_all()
 
 with app.app_context():
-    c = Cancion(titulo='Prueba', minuto=2, segundos=25, interprete='-juan Pablo')
+    c = Cancion(titulo='Prueba', minutos=2, segundos=25, interprete='-juan Pablo')
     db.session.add(c)
     db.session.commit()
     print(Cancion.query.all())
